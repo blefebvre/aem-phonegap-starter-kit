@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>PhoneGap Kitchen Sink - Reactor Project</name>
-    <description>Maven Multimodule project for PhoneGap Kitchen Sink.</description>
+    <name>app_name_placeholder - Reactor Project</name>
+    <description>Maven Multimodule project for app_name_placeholder.</description>
 
     <prerequisites>
         <maven>3.0.2</maven>

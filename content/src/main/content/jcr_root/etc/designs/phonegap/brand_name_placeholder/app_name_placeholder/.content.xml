@@ -6,7 +6,7 @@
         cq:lastModified="{Date}2014-03-26T10:01:29.277-06:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
-        jcr:title="Kitchen Sink App Design"
+        jcr:title="app_name_placeholder App Design"
         sling:resourceType="wcm/core/components/designer">
         <ng-ionic-page jcr:primaryType="nt:unstructured">
             <content-par

@@ -12,7 +12,7 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Kitchen Sink"
+        jcr:title="app_name_placeholder"
         jcr:uuid="8aa5d87b-cea9-44a3-a8a3-23347c370a7d"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"
         page-transition="slide-animation"
