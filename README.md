@@ -6,6 +6,16 @@ AEM PhoneGap Starter Kit
 To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.0 instance and committed to a version control system.
 
 
+### Requirements
+
+- AEM 6.0
+- [node.js](http://nodejs.org/) version `>=0.10.x`
+- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==3.4.*`
+- (iOS only) Xcode version `==5.1.*`
+- (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
+- (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
+
+
 ### Get started
 
 Clone this repository to your machine to begin.
@@ -18,6 +28,8 @@ This repository is built around two placeholders to enable quick customization: 
 To customize this boilerplate for your own project, simply replace every occurrence of these two variables with (JCR-friendly) names of your choice. 
 
 For example, let's say my brand name is 'Geometrixx' (originality is not the goal here) and app name is 'ShapesCon'. 
+
+Note: the following has only been tested on OS X. YMMV.
 
 The following lines will update each directory occurrence of the two placeholders with our desired values. Use your own names to customize for your application:
 
@@ -66,9 +78,9 @@ A few things to try:
 
 From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), navigate to your app, and through the English page to the first page of the app (it will have the Cordova logo as it's thumbnail). Enter 'select' mode via the checkmark button in the action bar, and select the app card (named 'ShapesCon' in my case).
 
-With your app selected, tap the PhoneGap icon to download your application to the filesystem.
+With your app selected, tap the PhoneGap icon to download your application to the filesystem. Unzip the payload, and navigate to the folder it created using your terminal of choice.
 
-Using the PhoneGap CLI, build and deploy your application to the iOS Simulator with the following command:
+Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and deploy your application to the iOS Simulator with the following command:
 
     phonegap run ios 
 
@@ -84,6 +96,6 @@ Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci
 
 ### Uninstall
 
-Just testing the waters? No problem. From the [package manager console](http://localhost:4502/crx/packmgr/index.jsp), locate the package named '<your-app-name>-content-1.0-SNAPSHOT.zip'. It should be at the top. Uninstall this package to remove your app, it's template, component, design, and supporting clientlibs.
+Just testing the waters? No problem. From the [package manager console](http://localhost:4502/crx/packmgr/index.jsp), locate the package named 'your-app-name-content-1.0-SNAPSHOT.zip'. It should be at the top. Uninstall this package to remove your app, it's template, component, design, and supporting clientlibs.
 
 
