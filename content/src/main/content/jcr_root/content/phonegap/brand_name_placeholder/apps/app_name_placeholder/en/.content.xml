@@ -8,6 +8,6 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/splash-page"
-        phonegap-exportTemplate="/content/phonegap/brand_name_placeholder/content/app_name_placeholder/app_name_placeholder-content-sync"/>
+        phonegap-exportTemplate="/content/phonegap/brand_name_placeholder/content/app_name_placeholder/contentsync"/>
     <home/>
 </jcr:root>

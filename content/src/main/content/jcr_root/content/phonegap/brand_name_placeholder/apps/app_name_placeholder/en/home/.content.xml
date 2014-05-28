@@ -16,7 +16,7 @@
         jcr:uuid="8aa5d87b-cea9-44a3-a8a3-23347c370a7d"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"
         page-transition="slide-animation"
-        phonegap-contentSyncConfigPath="/content/phonegap/brand_name_placeholder/content/app_name_placeholder/app_name_placeholder-content-sync">
+        phonegap-contentSyncConfigPath="/content/phonegap/brand_name_placeholder/content/app_name_placeholder/contentsync">
         <content-par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
