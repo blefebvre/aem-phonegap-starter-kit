@@ -27,7 +27,7 @@ The following lines will update each directory occurrence of the two placeholder
 
 You can ignore the 'No such file or directory' output.
 
-Next, we'll replace every occurrence of these two strings in our project:
+Next, we'll replace every occurrence of these two strings in our project code:
 
 	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/brand_name_placeholder/Geometrixx/g' {} \;
 	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/app_name_placeholder/ShapesCon/g' {} \;
@@ -37,20 +37,11 @@ Next, we'll replace every occurrence of these two strings in our project:
 
 This project is based on the [multimodule-content-package-archetype](http://dev.day.com/content/docs/en/aem/6-0/develop/how-tos/vlt-mavenplugin.html#multimodule-content-package-archetype) (with the bundle removed for simplicity), so it contains the same helpful profiles and properties to build and deploy your project with maven.
 
-From the project directory, run:
+From the project root, run:
 
     mvn -PautoInstallPackage clean install 
 
-to build the bundle and content package and install to a CQ instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
-
-
-### Using with VLT
-
-To use vlt with this project, first build and install the package to your local CQ instance as described above. Then cd to `src/main/content/jcr_root` and run
-
-    vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx
-
-Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci`` commands.
+... to build the content package and install to a CQ instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
 
 
 ### Edit in AEM
@@ -71,7 +62,7 @@ A few things to try:
 - Click and drag the page to the right to reveal the left shelf menu
 
 
-### Run on iOS Sim
+### Run on the iOS Simulator
 
 From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), navigate to your app, and through the English page to the first page of the app (it will have the Cordova logo as it's thumbnail). Enter 'select' mode via the checkmark button in the action bar, and select the app card (named 'ShapesCon' in my case).
 
@@ -80,6 +71,15 @@ With your app selected, tap the PhoneGap icon to download your application to th
 Using the PhoneGap CLI, build and deploy your application to the iOS Simulator with the following command:
 
     phonegap run ios 
+
+
+### Using with VLT
+
+To use vlt with this project, first build and install the package to your local CQ instance as described above. Then cd to `src/main/content/jcr_root` and run
+
+    vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx
+
+Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci`` commands.
 
 
 ### Uninstall
