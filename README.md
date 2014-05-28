@@ -25,5 +25,5 @@ The following lines will update each directory occurrence of the two placeholder
 
 Next, we'll replace every occurrence of these two strings in our project:
 
-	find . -type f -exec sed -i '' 's/brand_name_placeholder/Geometrixx/g' {} \;
-	find . -type f -exec sed -i '' 's/app_name_placeholder/ShapesCon/g' {} \;
+	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/brand_name_placeholder/Geometrixx/g' {} \;
+	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/app_name_placeholder/ShapesCon/g' {} \;
