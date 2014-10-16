@@ -8,6 +8,8 @@
     <author href="http://brucelefebvre.com/">
         brand_name_placeholder
     </author>
+    
+    <preference name="phonegap-version" value="3.5.0" />
 
     <content src="content/phonegap/brand_name_placeholder/app_name_placeholder/en.html" />
 
