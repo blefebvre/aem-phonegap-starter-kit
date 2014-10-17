@@ -9,6 +9,7 @@ fi
 
 find . -name brand_name_placeholder -type d -depth -execdir mv {} $1 \;
 find . -name app_name_placeholder -type d -depth -execdir mv {} $2 \;
+find . -name app_name_placeholder-dev -type d -depth -execdir mv {} $2-dev \;
 
 find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -depth -exec sed -i '' s/brand_name_placeholder/$1/g {} \;
 find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -depth -exec sed -i '' s/app_name_placeholder/$2/g {} \;
