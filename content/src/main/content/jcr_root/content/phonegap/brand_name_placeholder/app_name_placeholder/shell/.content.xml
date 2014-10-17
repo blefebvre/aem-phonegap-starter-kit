@@ -10,6 +10,7 @@
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/splash-page"
         pge-type="[app-instance]"
         phonegap-build-exportTemplate="/content/phonegap/brand_name_placeholder/app_name_placeholder/shell/jcr:content/pge-app/app_name_placeholder"
+        phonegap-build-exportTemplate-dev="/content/phonegap/brand_name_placeholder/app_name_placeholder/shell/jcr:content/pge-app/app_name_placeholder-dev"
         phonegap-exportTemplate="/content/phonegap/brand_name_placeholder/app_name_placeholder/shell/jcr:content/pge-app/app-config">
         <image
             jcr:lastModified="{Date}2014-09-04T16:49:51.263-04:00"
@@ -23,6 +24,8 @@
             </app-content>
             <app-config/>
             <app_name_placeholder/>
+            <app_name_placeholder-dev/>
+            <app-config-dev/>
         </pge-app>
         <screenshots
             jcr:primaryType="nt:unstructured"
