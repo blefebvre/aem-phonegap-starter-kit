@@ -1,6 +1,9 @@
 AEM PhoneGap Starter Kit
 ========================
 
+:new: Note that the requirements have changed as of November 2014.
+
+
 ### Goal 
 
 To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.0 instance and committed to a version control system.
@@ -8,10 +11,13 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 
 ### Requirements
 
-- AEM 6.0
+- AEM 6.0, with:
+	- [Service Pack 1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem600/servicepack/AEM-6.0-Service-Pack) installed
+	- [Apps Feature Pack 1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq600/featurepack/cq-6.0.0-featurepack-4558) installed
+	- [Geometrixx Apps update](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-outdoors-app-pkg) installed
 - [node.js](http://nodejs.org/) version `>=0.10.x`
-- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==3.4.*`
-- (iOS only) Xcode version `==5.1.*`
+- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `>=3.6.0`
+- (iOS only) Xcode version `==6.1`
 - (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
 
@@ -25,24 +31,13 @@ Clone this repository to your machine to begin.
 
 This repository is built around two placeholders to enable quick customization: `brand_name_placeholder` and `app_name_placeholder`.
 
-To customize this boilerplate for your own project, simply replace every occurrence of these two variables with (JCR-friendly) names of your choice. 
+To customize this boilerplate for your own project, simply replace every occurrence of these two variables with (JCR-friendly) names of your choice. You can use [customize-app.sh](customize-app.sh) for this, if you're using bash.
 
 For example, let's say my brand name is 'Geometrixx' (originality is not the goal here) and app name is 'ShapesCon'. 
 
 Note: the following has only been tested on OS X. YMMV.
 
-The following lines will update each directory occurrence of the two placeholders with our desired values. Use your own names to customize for your application:
-
-	cd aem-phonegap-starter-kit
-	find . -name brand_name_placeholder -type d -execdir mv {} Geometrixx \;
-	find . -name app_name_placeholder -type d -execdir mv {} ShapesCon \;
-
-You can ignore the 'No such file or directory' output.
-
-Next, we'll replace every occurrence of these two strings in our project code:
-
-	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/brand_name_placeholder/Geometrixx/g' {} \;
-	find . -type f \( -name '*.xml' -o -name '*.jsp' -o -name index.html -o -name config.json \) -exec sed -i '' 's/app_name_placeholder/ShapesCon/g' {} \;
+	./customize-app.sh Geometrixx ShapesCon
 
 
 ### Install
@@ -53,41 +48,39 @@ From the project root, run:
 
     mvn -PautoInstallPackage clean install 
 
-... to build the content package and install to a CQ instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
+... to build the content package and install to a AEM instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
 
 
 ### Edit in AEM
 
 Once built and installed via maven, your new app should be editable in AEM. Take a look at the new [Apps admin console](http://localhost:4502/aem/apps.html/content/phonegap) to view the available apps on your instance.
 
-A new app with the name you specified above ('ShapesCon' in my case) should be listed with the Cordova logo as it's thumbnail. If you followed the instructions exactly and have your author instance running locally on :4502, you should be able to access your new app via the following link:
+A new app folder with the brand name you specified above ('Geometrixx' in my case) should be listed. Tap it to view the app you created, which will be listed with the Cordova logo as it's thumbnail. If you followed the instructions exactly and have your author instance running locally on :4502, you should be able to author your new app via the following link:
 
-[http://localhost:4502/cf#/content/phonegap/Geometrixx/apps/ShapesCon/en/home.html](http://localhost:4502/cf#/content/phonegap/Geometrixx/apps/ShapesCon/en/home.html)
-
-Note: A keen observer will see that I replaced `editor.html` with `cf#` in the URL. This was done to avoid a conflict the new editor has with the Ionic styles. YMMV depending on which client side libraries your project includes.
+[http://localhost:4502/editor.html/content/phonegap/Geometrixx/ShapesCon/en/home.html](http://localhost:4502/editor.html/content/phonegap/Geometrixx/ShapesCon/en/home.html)
 
 A few things to try:
 
 - Add a child page. It will become linked via the Ionic Menu List component already included on the home page of your app
 - Add an image or text component
-- Install the [aem-phonegap-kitchen-sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) project to experiment with a number of other components that deal with PhoneGap's device level APIs
-- Click and drag the page to the right to reveal the left shelf menu
+- Install the [aem-phonegap-kitchen-sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) project to experiment with a number of other components that deal with PhoneGap's device APIs
+- Enter 'preview' mode, and drag the page to the right to reveal the left shelf menu
 
 
 ### Run on the iOS Simulator
 
-From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), navigate to your app, and through the English page to the first page of the app (it will have the Cordova logo as it's thumbnail). Enter 'select' mode via the checkmark button in the action bar, and select the app card (named 'ShapesCon' in my case).
+From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), navigate to your app's [Command Center](http://localhost:4502/libs/mobileapps/admin/content/dashboard.html/content/phonegap/Geometrixx/ShapesCon/shell) (your URI will differ based on the values you provided to `customize-app.sh`).
 
-With your app selected, tap the PhoneGap icon to download your application to the filesystem. Unzip the payload, and navigate to the folder it created using your terminal of choice.
+Locate the 'PhoneGap Build' tile, and the down arrow to the top right of the pane. Tap this arrow, then tap the 'Download CLI' item to initiate a download of your app's content. A .zip payload will be downloaded locally. Using your command line of choice, navigate to the directory created by extracting the payload. Using OS X? this handy [Finder toolbar app](https://github.com/jbtule/cdto) makes it easy.
 
 Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and deploy your application to the iOS Simulator with the following command:
 
-    phonegap run ios 
+    phonegap run ios --emulator
 
 
 ### Using with VLT
 
-To use vlt with this project, first build and install the package to your local CQ instance as described above. Then cd to `src/main/content/jcr_root` and run
+To use vlt with this project, first build and install the package to your local AEM instance as described above. Then `cd content/src/main/content/jcr_root/` and run:
 
     vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx
 
@@ -96,6 +89,6 @@ Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci
 
 ### Uninstall
 
-Just testing the waters? No problem. From the [package manager console](http://localhost:4502/crx/packmgr/index.jsp), locate the package named 'your-app-name-content-1.0-SNAPSHOT.zip'. It should be at the top. Uninstall this package to remove your app, it's template, component, design, and supporting clientlibs.
+Just testing the waters? No problem. From the [package manager console](http://localhost:4502/crx/packmgr/index.jsp), locate the package named 'your-app-name-content-1.0-SNAPSHOT.zip'. It should be at the top of the list. Uninstall this package to remove your app, it's template, component, design, and supporting clientlibs.
 
 
