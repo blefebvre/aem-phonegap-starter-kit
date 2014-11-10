@@ -1,7 +1,7 @@
 AEM PhoneGap Starter Kit
 ========================
 
-:new: Note that the requirements have changed as of November 2014. If you do not have the Apps featurepack installed, please use the [release/6.0 branch](tree/release/6.0).
+:new: Note that the requirements have changed as of November 2014. If you do not have the Apps featurepack installed, please use the [release/6.0 branch](aem-phonegap-starter-kit/tree/release/6.0).
 
 
 ### Goal 
