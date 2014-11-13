@@ -3,6 +3,6 @@
     jcr:primaryType="nt:unstructured"
     extension="css"
     includeFolders="[fonts]"
-    path="/etc/clientlibs/brand_name_placeholder/ionic"
+    path="/etc/clientlibs/brand_name_placeholder/ionic-1.0.0-beta.13"
     targetRootDirectory="www"
     type="clientlib"/>
