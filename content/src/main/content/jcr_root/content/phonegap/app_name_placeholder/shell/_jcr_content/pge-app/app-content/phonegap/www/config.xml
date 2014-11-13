@@ -9,7 +9,7 @@
         brand_name_placeholder
     </author>
     
-    <preference name="phonegap-version" value="3.5.0" />
+    <preference name="phonegap-version" value="3.6.3" />
 
     <content src="content/phonegap/app_name_placeholder/en.html" />
 
