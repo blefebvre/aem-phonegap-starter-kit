@@ -11,7 +11,7 @@
     
     <preference name="phonegap-version" value="3.5.0" />
 
-    <content src="content/phonegap/brand_name_placeholder/app_name_placeholder/en.html" />
+    <content src="content/phonegap/app_name_placeholder/en.html" />
 
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />

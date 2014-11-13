@@ -9,7 +9,7 @@
         jcr:title="English"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/splash-page"
         pge-type="[app-content]"
-        phonegap-exportTemplate="/content/phonegap/brand_name_placeholder/app_name_placeholder/en/jcr:content/pge-app/app-config">
+        phonegap-exportTemplate="/content/phonegap/app_name_placeholder/en/jcr:content/pge-app/app-config">
         <pge-app jcr:primaryType="nt:unstructured">
             <app-config/>
             <app-config-dev/>
