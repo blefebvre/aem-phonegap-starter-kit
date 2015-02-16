@@ -3,7 +3,7 @@
     jcr:description="Template for building Ionic PhoneGap pages"
     jcr:primaryType="cq:Template"
     jcr:title="Ionic PhoneGap page"
-    allowedPaths="[/content/phonegap(/.*)?]"
+    allowedPaths="[/content/phonegap/app_name_placeholder(/.*)?]"
     ranking="{Long}-3">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"
