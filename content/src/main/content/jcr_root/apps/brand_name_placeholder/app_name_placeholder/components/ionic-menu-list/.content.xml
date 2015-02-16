@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Ionic Menu List"
     sling:resourceSuperType="geometrixx-outdoors-app/components/menu-list"
-    componentGroup="PhoneGap"/>
+    componentGroup="brand_name_placeholder app_name_placeholder"/>

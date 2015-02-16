@@ -14,7 +14,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/parsys"
-                components="[/apps/geometrixx-outdoors-app/components/image,group:PhoneGap,group:PhoneGap API]">
+                components="[group:brand_name_placeholder app_name_placeholder,group:PhoneGap,group:PhoneGap API]">
                 <section jcr:primaryType="nt:unstructured"/>
             </content-par>
         </ng-ionic-page>
