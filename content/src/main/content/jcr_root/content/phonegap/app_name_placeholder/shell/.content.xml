@@ -6,7 +6,7 @@
         cq:lastModified="{Date}2014-09-04T16:49:51.266-04:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
-        jcr:title="app_name_placeholder Shell"
+        jcr:title="app_name_placeholder App"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/splash-page"
         pge-type="[app-instance]"
         phonegap-build-exportTemplate="/content/phonegap/app_name_placeholder/shell/jcr:content/pge-app/app_name_placeholder"
