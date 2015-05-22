@@ -14,7 +14,7 @@
     <description>Maven Multimodule project for app_name_placeholder.</description>
 
     <prerequisites>
-        <maven>3.0.2</maven>
+        <maven>3.3.1</maven>
     </prerequisites>
 
     <!-- ====================================================================== -->
@@ -190,7 +190,7 @@
                 <plugin>
                     <groupId>com.day.jcr.vault</groupId>
                     <artifactId>content-package-maven-plugin</artifactId>
-                    <version>0.0.20</version>
+                    <version>0.0.24</version>
                     <extensions>true</extensions>
                     <configuration>
                         <failOnError>true</failOnError>
