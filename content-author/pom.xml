@@ -10,9 +10,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>app_name_placeholder-content</artifactId>
+    <artifactId>app_name_placeholder-content-author</artifactId>
     <packaging>content-package</packaging>
-    <name>app_name_placeholder - Content</name>
+    <name>app_name_placeholder - Content Author</name>
 
     <prerequisites>
         <maven>3.0.2</maven>

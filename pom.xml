@@ -256,6 +256,7 @@
         </profile>
     </profiles>
   <modules>
-    <module>content</module>
+      <module>content-dev</module>
+      <module>content-author</module>
   </modules>
 </project>

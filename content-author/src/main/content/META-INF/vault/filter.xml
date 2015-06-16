@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/phonegap/app_name_placeholder">
+        <include pattern="/content/phonegap/app_name_placeholder(/.*)?"/>
+        <exclude pattern="/content/phonegap/app_name_placeholder/shell(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/brand_name_placeholder/app_name_placeholder"/>
+</workspaceFilter>
