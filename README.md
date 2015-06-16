@@ -1,7 +1,7 @@
 AEM Apps Starter Kit
 ====================
 
-:new: Note that the requirements have changed as of November 2014. If you do not have the Apps featurepack installed, please use the `release/6.0` branch.
+:new: Note that the requirements have changed as of June 2015. If you do not yet have AEM 6.1, please use the `release/6.0-apps-featurepack` branch.
 
 
 ### Goal 
@@ -11,13 +11,10 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 
 ### Requirements
 
-- AEM 6.0, with:
-	- [Service Pack 1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/aem600/servicepack/AEM-6.0-Service-Pack) installed
-	- [Apps Feature Pack 1](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq600/featurepack/cq-6.0.0-featurepack-4558) installed
-	- [Geometrixx Apps update](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq60/product/cq-geometrixx-outdoors-app-pkg) installed
-- [node.js](http://nodejs.org/) version `>=0.10.x`
-- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `>=3.6.0`
-- (iOS only) Xcode version `==6.1`
+- AEM 6.1
+- [node.js](http://nodejs.org/) version `>=0.12.x`
+- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `>=5.0.0`
+- (iOS only) Xcode version `>=6.3.1`
 - (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
 
