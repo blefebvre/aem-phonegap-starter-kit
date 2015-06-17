@@ -12,6 +12,7 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 ### Requirements
 
 - AEM 6.1
+- [Apache Maven](https://maven.apache.org/) version `>=3.1.1`
 - [node.js](http://nodejs.org/) version `>=0.12.x`
 - [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `>=5.0.0`
 - (iOS only) Xcode version `>=6.3.1`
