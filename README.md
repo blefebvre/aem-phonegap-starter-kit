@@ -6,7 +6,7 @@ AEM Apps Starter Kit
 
 ### Goal 
 
-To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.0 instance and committed to a version control system.
+To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.1 instance and committed to a version control system.
 
 
 ### Requirements
