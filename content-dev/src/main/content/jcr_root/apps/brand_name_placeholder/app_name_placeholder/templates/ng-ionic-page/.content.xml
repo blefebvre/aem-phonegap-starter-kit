@@ -8,6 +8,5 @@
     <jcr:content
         cq:designPath="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"
-        page-transition="slide-animation"/>
+        sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"/>
 </jcr:root>
