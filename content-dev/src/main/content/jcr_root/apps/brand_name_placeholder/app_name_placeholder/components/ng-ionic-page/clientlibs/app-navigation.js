@@ -108,9 +108,7 @@
                         function callback(error, isUpdateAvailable) {
                             if (error) {
                                 // Alert the error details.
-                                //return navigator.notification.alert(error, null, 'Content Update Error');
-                                console.log(error);
-                                return
+                                return navigator.notification.alert(error, null, 'Content Update Error');
                             }
 
                             if (isUpdateAvailable) {
@@ -123,10 +121,8 @@
                                             contentUpdater.updateContentPackageByName($scope.contentPackageName,
                                                 function callback(error, pathToContent) {
                                                     if (error) {
-                                                        //return navigator.notification.alert(error, null, 'Error');
-                                                        console.log(error);
                                                         $scope.updating = false;
-                                                        return;
+                                                        return navigator.notification.alert(error, null, 'Error');
                                                     }
                                                     // else
                                                     console.log('Update complete; reloading app.');
@@ -142,7 +138,7 @@
                                     ['Update', 'Later'] // button labels
                                 );
                             } else {
-                                console.log("no update is currently available");
+                                navigator.notification.alert('App is up to date.', null, 'Content Update', 'Done');
                             }
                         }
                     );
