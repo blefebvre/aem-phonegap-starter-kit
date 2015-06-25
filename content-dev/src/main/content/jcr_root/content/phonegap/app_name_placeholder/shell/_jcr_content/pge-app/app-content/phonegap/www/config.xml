@@ -24,7 +24,6 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="false" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <preference name="SplashScreen" value="screen" />
     <preference name="AutoHideSplashScreen" value="false"/>
@@ -69,7 +68,7 @@
     <plugin name="cordova-plugin-splashscreen" spec="^1.0.0" />
     <plugin name="cordova-plugin-camera" spec="^1.1.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.0.0" />
-    <plugin name="com.telerik.plugins.nativepagetransitions" spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions#0.2.11" />
+    <plugin name="com.telerik.plugins.nativepagetransitions" spec="https://github.com/Telerik-Verified-Plugins/NativePageTransitions#0.4.1" />
     <plugin name="ADBMobile" spec="https://github.com/Adobe-Marketing-Cloud/mobile-services#0482f9cedf90c98a8d4b07219ece1933b2e46a60" />
     <plugin name="com.phonegap.plugins.pushplugin" spec="https://github.com/phonegap-build/PushPlugin#1979d972b6ab37e28cf2077bc7ebfe706cc4dacd" />
 
