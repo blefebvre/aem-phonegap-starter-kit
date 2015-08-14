@@ -41,14 +41,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "phonegap-plugin-contentsync": {
-        "source": {
-            "type": "registry",
-            "id": "phonegap-plugin-contentsync@^1.0.2"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-file-transfer": {
         "source": {
             "type": "registry",
@@ -121,6 +113,14 @@
             "url": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
             "subdir": ".",
             "ref": "0.4.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "phonegap-plugin-contentsync": {
+        "source": {
+            "type": "registry",
+            "id": "phonegap-plugin-contentsync@^1.0.2"
         },
         "is_top_level": true,
         "variables": {}

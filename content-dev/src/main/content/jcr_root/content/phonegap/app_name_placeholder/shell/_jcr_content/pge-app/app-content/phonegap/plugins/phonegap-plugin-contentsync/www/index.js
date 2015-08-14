@@ -33,8 +33,8 @@ var ContentSync = function(options) {
     }
 
     // require options.src parameter
-    if (typeof options.src === 'undefined') {
-        throw new Error('The options.src argument is required.');
+    if (typeof options.src === 'undefined' && options.type !== "local") {
+        throw new Error('The options.src argument is required for merge replace types.');
     }
 
     // require options.id parameter
@@ -49,6 +49,8 @@ var ContentSync = function(options) {
     //              deleted accordingly.
     //     merge:   Existing content is not modified, i.e. only new content is
     //              added and none is deleted or modified.
+    //     local:   Existing content is not modified, i.e. only new content is
+    //              added and none is deleted or modified.
     //
     if (typeof options.type === 'undefined') {
         options.type = 'replace';
@@ -60,6 +62,14 @@ var ContentSync = function(options) {
 
     if (typeof options.copyCordovaAssets === 'undefined') {
         options.copyCordovaAssets = false;
+    }
+
+    if (typeof options.copyRootApp === 'undefined') {
+        options.copyRootApp = false;
+    }
+    
+    if (typeof options.timeout === 'undefined') {
+        options.timeout = 15.0;
     }
 
     // store the options to this object instance
@@ -83,7 +93,7 @@ var ContentSync = function(options) {
 
     // wait at least one process tick to allow event subscriptions
     setTimeout(function() {
-        exec(success, fail, 'Sync', 'sync', [options.src, options.id, options.type, options.headers, options.copyCordovaAssets]);
+        exec(success, fail, 'Sync', 'sync', [options.src, options.id, options.type, options.headers, options.copyCordovaAssets, options.copyRootApp, options.timeout]);
     }, 10);
 };
 
