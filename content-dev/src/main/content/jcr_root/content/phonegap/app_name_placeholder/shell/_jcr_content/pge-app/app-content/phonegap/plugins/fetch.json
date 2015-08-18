@@ -117,10 +117,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "phonegap-plugin-contentsync": {
+    "cordova-plugin-zip": {
         "source": {
             "type": "registry",
-            "id": "phonegap-plugin-contentsync@^1.0.2"
+            "id": "cordova-plugin-zip@3.0.0"
         },
         "is_top_level": true,
         "variables": {}
