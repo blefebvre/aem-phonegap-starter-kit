@@ -85,6 +85,11 @@ To use vlt with this project, first build and install the package to your local 
 Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci`` commands.
 
 
+### On 'Content Security Policy'
+
+A very open Content-Security-Policy meta tag has been included in [two](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/ng-ionic-page/css_clientlibs.jsp) [places](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/splash-page/headlibs.jsp). You should review [the documentation](https://github.com/apache/cordova-plugin-whitelist#content-security-policy) on its usage and adjust this tag for your particular app's requirements.
+
+
 ### Uninstall
 
 Just testing the waters? No problem. From the [package manager console](http://localhost:4502/crx/packmgr/index.jsp), locate the package named 'your-app-name-content-1.0-SNAPSHOT.zip'. It should be at the top of the list. Uninstall this package to remove your app, it's template, component, design, and supporting clientlibs.
