@@ -38,7 +38,7 @@
         <cq:include script="footer.jsp"/>
     </div>
 
-    <cq:includeClientLib js="angularjs"/>
+    <cq:includeClientLib js="brand_name_placeholder.ionic-1.0.0"/>
     <script src="<c:out value='${currentPage.name}'/>.angular-app-module.js"></script>
     <script src="<c:out value='${currentPage.name}'/>.angular-app-controllers.js"></script>
     <cq:include script="js_clientlibs.jsp"/>
