@@ -14,7 +14,6 @@
 'ngTouch',
 'ngAnimate',
 'ngSanitize',
-'cqContentSync',
 'cqAppControllers',
 'cqAppNavigation',
 'snap'
