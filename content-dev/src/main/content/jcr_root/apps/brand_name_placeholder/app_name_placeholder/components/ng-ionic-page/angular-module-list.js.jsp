@@ -16,5 +16,6 @@
 'ngSanitize',
 'cqAppControllers',
 'cqAppNavigation',
-'snap'
+'snap',
+'ionic'
 ]
