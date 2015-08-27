@@ -20,3 +20,8 @@ video {
 img {
 	max-width: 100%;
 }
+
+/* Push menu down below status bar on iOS */
+.platform-ios .snap-drawer-left {
+	padding-top: 20px;
+}
