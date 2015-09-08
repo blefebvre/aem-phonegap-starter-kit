@@ -35,7 +35,7 @@
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
 
-    <icon src="icon.png" />
+    <icon fileReference="/content/dam/brand_name_placeholder/app_name_placeholder/thumbnail.png" src="icon.png"/>
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1.0.0" />
 
