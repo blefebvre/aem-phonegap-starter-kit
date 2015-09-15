@@ -255,7 +255,9 @@
             </build>
         </profile>
     </profiles>
+
   <modules>
+      <module>content-core</module>
       <module>content-dev</module>
       <module>content-author</module>
   </modules>

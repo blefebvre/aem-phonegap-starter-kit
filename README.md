@@ -46,7 +46,22 @@ From the project root, run:
 
     mvn -PautoInstallPackage clean install 
 
-... to build the content package and install to a AEM instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
+... to build *all* the content packages and install to a AEM instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
+
+### Template Only
+
+An app template only install option is also available. This option will only install the starter kit core components and an associated app template.
+Once the template only option has been installed instances of the starter kit can be created by accessing the *Create App* action of the AEM Apps console.
+
+From the project root, run:
+
+    mvn -PautoInstallTemplate clean install 
+
+- Navigate to the [AEM Apps console](http://localhost:4502/aem/apps.html/content/phonegap)
+- Select *Create* menu option
+- Select *Create App*
+- Choose the *Starter Kit* template
+- Complete the wizard
 
 
 ### Edit in AEM
