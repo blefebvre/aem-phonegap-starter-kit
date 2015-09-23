@@ -29,5 +29,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resources="[]"/>
         </screenshots>
+        <widget jcr:primaryType="nt:unstructured">
+            <content
+                jcr:primaryType="nt:unstructured"
+                src="../../../../en"/>
+        </widget>
     </jcr:content>
 </jcr:root>
