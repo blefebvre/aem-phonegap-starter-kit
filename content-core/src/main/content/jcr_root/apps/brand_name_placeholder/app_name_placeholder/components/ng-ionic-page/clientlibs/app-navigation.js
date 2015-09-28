@@ -6,11 +6,14 @@
      * Module to handle general navigation in the app
      */
     angular.module('cqAppNavigation', ['btford.phonegap.ready'])
-        .controller('AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady',
-            function ($scope, $window, $location, $timeout, phonegapReady) {
+        .controller('AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady', '$rootElement',
+            function ($scope, $window, $location, $timeout, phonegapReady, $rootElement) {
 
                 $scope.updating = false;
-                var contentUpdater = contentUpdate();
+                var appName = $rootElement.attr('ng-app');
+                var contentUpdater = contentUpdate({
+                    id: appName
+                });
 
                 // Counter to indicate how far we've travelled from the root of the app
                 var numberOfPagesFromRoot = 0;

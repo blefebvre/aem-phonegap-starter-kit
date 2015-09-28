@@ -45,7 +45,7 @@
     <gap:plugin name="cordova-plugin-geolocation" source="npm" version="^1.0.0" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" version="^1.0.0" />
     <!-- Console plugin is not relevant for Build -->
-    <gap:plugin name="cordova-plugin-zip" source="npm" version="3.0.0" />
+    <gap:plugin name="phonegap-plugin-contentsync" source="npm" version="1.1.12" />
     <gap:plugin name="cordova-plugin-dialogs" source="npm" version="^1.1.0" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm" version="^1.0.0" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="^1.0.0" />
@@ -61,7 +61,7 @@
     <plugin name="cordova-plugin-geolocation" spec="^1.0.0" />
     <plugin name="cordova-plugin-network-information" spec="^1.0.0" />
     <plugin name="cordova-plugin-console" spec="^1.0.0" />
-    <plugin name="cordova-plugin-zip" spec="3.0.0" />
+    <plugin name="phonegap-plugin-contentsync" spec="1.1.12" />
     <plugin name="cordova-plugin-dialogs" spec="^1.1.0" />
     <plugin name="cordova-plugin-statusbar" spec="^1.0.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^1.0.0" />
