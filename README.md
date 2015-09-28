@@ -1,7 +1,7 @@
 AEM Apps Starter Kit
 ====================
 
-:new: Note that the requirements have changed as of June 2015. If you do not yet have AEM 6.1, please use the `release/6.0-apps-featurepack` branch.
+:new: Note that the requirements have changed as of September 2015. If you do not have AEM 6.1 + FeaturePack 2, please use the `release/6.1` branch.
 
 
 ### Goal 
@@ -12,9 +12,11 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 ### Requirements
 
 - AEM 6.1
+	- [Apps FeaturePack 2.0.4](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack)
+	- [Apps Samples 2.0.4](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack-samples) (optional; updates Geo samples)
 - [Apache Maven](https://maven.apache.org/) version `>=3.1.1`
 - [node.js](http://nodejs.org/) version `>=0.12.x`
-- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==5.1.1` (install exact version with `npm install -g phonegap@5.1.1`)
+- [Cordova CLI](https://github.com/apache/cordova-cli/) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
 - (iOS only) Xcode version `>=6.3.1`
 - (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
@@ -46,7 +48,22 @@ From the project root, run:
 
     mvn -PautoInstallPackage clean install 
 
-... to build the content package and install to a AEM instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
+... to build *all* the content packages and install to a AEM instance. The CRX host and port can be specified on the command line with `mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>`
+
+### Template Only
+
+An app template only install option is also available. This option will only install the starter kit core components and an associated app template.
+Once the template only option has been installed instances of the starter kit can be created by accessing the *Create App* action of the AEM Apps console.
+
+From the project root, run:
+
+    mvn -PautoInstallTemplate clean install 
+
+- Navigate to the [AEM Apps console](http://localhost:4502/aem/apps.html/content/phonegap)
+- Select *Create* menu option
+- Select *Create App*
+- Choose the *Starter Kit* template
+- Complete the wizard
 
 
 ### Edit in AEM
@@ -71,9 +88,11 @@ From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), n
 
 Locate the 'PhoneGap Build' tile, and the down arrow to the top right of the pane. Tap this arrow, then tap the 'Download CLI' item to initiate a download of your app's content. A .zip payload will be downloaded locally. Using your command line of choice, navigate to the directory created by extracting the payload. Using OS X? this handy [Finder toolbar app](https://github.com/jbtule/cdto) makes it easy.
 
-Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and deploy your application to the iOS Simulator with the following command:
+Using the [Cordova CLI](https://github.com/apache/cordova-cli/), build and deploy your application to the iOS Simulator with the following command:
 
-    phonegap run ios --emulator
+    cordova platform add ios && cordova run ios --emulator
+
+Note: at the time of writing there is an open issue with Apple's ATS and Cordova-ios. See the following [note in our docs](http://docs.adobe.com/docs/en/aem/6-1/develop/mobile-apps/apps.html#Developing%20for%20IOS%209%20and%20HTTP%20hosts) for a workaround.
 
 
 ### Using with VLT
