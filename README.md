@@ -90,6 +90,8 @@ Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and de
 
     phonegap run ios --emulator
 
+Note: at the time of writing there is an open issue with Apple's ATS and Cordova-ios. See the following [note in our docs](http://docs.adobe.com/docs/en/aem/6-1/develop/mobile-apps/apps.html#Developing%20for%20IOS%209%20and%20HTTP%20hosts) for a workaround.
+
 
 ### Using with VLT
 
