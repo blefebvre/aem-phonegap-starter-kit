@@ -12,6 +12,8 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 ### Requirements
 
 - AEM 6.1
+	- [Apps FeaturePack 2.0.4](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack)
+	- [Apps Samples 2.0.4](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack-samples) (optional; updates Geo samples)
 - [Apache Maven](https://maven.apache.org/) version `>=3.1.1`
 - [node.js](http://nodejs.org/) version `>=0.12.x`
 - [Cordova CLI](https://github.com/apache/cordova-cli/) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
