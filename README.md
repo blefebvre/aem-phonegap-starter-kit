@@ -1,7 +1,7 @@
 AEM Apps Starter Kit
 ====================
 
-:new: Note that the requirements have changed as of June 2015. If you do not yet have AEM 6.1, please use the `release/6.0-apps-featurepack` branch.
+:new: Note that the requirements have changed as of September 2015. If you do not have AEM 6.1 + FeaturePack 2, please use the `release/6.1` branch.
 
 
 ### Goal 
