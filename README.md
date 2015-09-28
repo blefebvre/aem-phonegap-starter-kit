@@ -14,7 +14,7 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 - AEM 6.1
 - [Apache Maven](https://maven.apache.org/) version `>=3.1.1`
 - [node.js](http://nodejs.org/) version `>=0.12.x`
-- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==5.1.1` (install exact version with `npm install -g phonegap@5.1.1`)
+- [Cordova CLI](https://github.com/apache/cordova-cli/) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
 - (iOS only) Xcode version `>=6.3.1`
 - (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
@@ -86,9 +86,9 @@ From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), n
 
 Locate the 'PhoneGap Build' tile, and the down arrow to the top right of the pane. Tap this arrow, then tap the 'Download CLI' item to initiate a download of your app's content. A .zip payload will be downloaded locally. Using your command line of choice, navigate to the directory created by extracting the payload. Using OS X? this handy [Finder toolbar app](https://github.com/jbtule/cdto) makes it easy.
 
-Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and deploy your application to the iOS Simulator with the following command:
+Using the [Cordova CLI](https://github.com/apache/cordova-cli/), build and deploy your application to the iOS Simulator with the following command:
 
-    phonegap run ios --emulator
+    cordova platform add ios && cordova run ios --emulator
 
 Note: at the time of writing there is an open issue with Apple's ATS and Cordova-ios. See the following [note in our docs](http://docs.adobe.com/docs/en/aem/6-1/develop/mobile-apps/apps.html#Developing%20for%20IOS%209%20and%20HTTP%20hosts) for a workaround.
 
