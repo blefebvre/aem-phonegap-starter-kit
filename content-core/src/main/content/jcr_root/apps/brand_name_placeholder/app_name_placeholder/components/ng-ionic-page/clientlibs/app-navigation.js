@@ -1,18 +1,31 @@
 ;(function (angular, contentUpdate, undefined) {
 
-    "use strict";
+    'use strict';
 
     /**
      * Module to handle general navigation in the app
      */
-    angular.module('cqAppNavigation', ['btford.phonegap.ready'])
-        .controller('AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady', '$rootElement',
-            function ($scope, $window, $location, $timeout, phonegapReady, $rootElement) {
+    angular.module( 'cqAppNavigation', ['ionic', 'btford.phonegap.ready'] )
+
+        .controller( 'AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady', '$rootElement', '$ionicSideMenuDelegate', '$ionicTabsDelegate',
+            function( $scope, $window, $location, $timeout, phonegapReady, $rootElement, $ionicSideMenuDelegate, $ionicTabsDelegate) {
 
                 $scope.updating = false;
+
+                // Request headers for Content Sync
+                var reqHeaderObject = {
+                    // Basic auth example:
+                    //Authorization: "Basic " + btoa("username:password")
+                };
+
+                // Use app name as ContentSync package ID
                 var appName = $rootElement.attr('ng-app');
                 var contentUpdater = contentUpdate({
-                    id: appName
+                    id: appName,
+                    requestHeaders: reqHeaderObject,
+                    // Indicate that self-signed certificates should be trusted
+                    // should be set to `false` in production.
+                    trustAllHosts: false
                 });
 
                 // Counter to indicate how far we've travelled from the root of the app
@@ -20,8 +33,13 @@
                 $scope.atRootPage = true;
 
                 // Page dimensions for consistent transitions
-                var headerHeight = 0;
+                var headerHeight = 44;
                 var footerHeight = 0;
+
+                // Add 20px when iOS is detected
+                if (/iPad|iPhone|iPod/.test(navigator.platform)) {
+                    headerHeight += 20;
+                }
 
                 // Page transition constants
                 var pageTransitions = {
@@ -45,7 +63,7 @@
                 // Initialize pageTransition effect options once deviceready has fired
                 var initializeTransitions = phonegapReady(function() {
                     if (($scope.wcmMode === false) &&
-                        (window.plugins && window.plugins.nativepagetransitions)) {
+                            (window.plugins && window.plugins.nativepagetransitions)) {
                         pageTransitions.effect = {
                             slide: window.plugins.nativepagetransitions.slide.bind(window.plugins.nativepagetransitions),
                             flip: window.plugins.nativepagetransitions.flip.bind(window.plugins.nativepagetransitions)
@@ -53,6 +71,9 @@
                     }
                 });
                 initializeTransitions();
+
+                // Make platform available to $scope for setting tab spacing on Android
+                $scope.platform = ionic.Platform;
 
                 /**
                  * Handle back button
@@ -65,18 +86,6 @@
                 };
 
                 /**
-                 * Handle navigation from menu items to pages in the app
-                 */
-                $scope.goMenuItem = function( path, trackingTitle ) {
-                    numberOfPagesFromRoot++;
-                    $scope.atRootPage = false;
-                    // Navigate to the given path with a fixed header & footer size of 0
-                    navigateToPage( path, trackingTitle,
-                        pageTransitions.effect.slide, pageTransitions.direction.left, 0, 0 );
-                    console.log( '[nav] app navigated to menu item: [' + (trackingTitle || path) + '].' );
-                };
-
-                /**
                  * Handle navigation to app pages
                  */
                 $scope.go = function( path, trackingTitle, transitionDirection ) {
@@ -84,19 +93,44 @@
                     $scope.atRootPage = false;
                     transitionDirection = transitionDirection || pageTransitions.direction.left;
                     navigateToPage( path, trackingTitle,
-                        pageTransitions.effect.slide, transitionDirection );
+                            pageTransitions.effect.slide, transitionDirection );
                     console.log( '[nav] app navigated to: [' + (trackingTitle || path) + '].' );
                 };
 
                 /**
-                 * Toggle the menu
+                 * Handle navigation to another tab, with no transition
+                 */
+                $scope.goTab = function( path, trackingTitle, tabId ) {
+                    numberOfPagesFromRoot = 0;
+                    $scope.atRootPage = true;
+                    navigateToPage( path, trackingTitle,
+                            pageTransitions.effect.slide, pageTransitions.direction.none );
+                    console.log( '[nav] app navigated to tab: [' + (trackingTitle || path) + '].' );
+                    if (tabId) {
+                        $scope.selectedTab = tabId;
+                        $timeout(function () {
+                            $ionicTabsDelegate.select(tabId);
+                        }, 20);
+                    }
+                };
+
+                /**
+                 * Toggle the left flyout menu
                  */
                 $scope.toggleMenu = function() {
-                    if( window.ADB && !$scope.navigationMenuStatus ) {
-                        ADB.trackState( 'menu', {} );
-                    }
+                    $ionicSideMenuDelegate.toggleLeft();
+                };
 
-                    $scope.navigationMenuStatus = !$scope.navigationMenuStatus;
+                /**
+                 * Handle navigation from menu items to pages in the app
+                 */
+                $scope.goMenuItem = function( path, trackingTitle ) {
+                    numberOfPagesFromRoot++;
+                    $scope.atRootPage = false;
+                    // Navigate to the given path with a fixed header & footer size of 0
+                    navigateToPage( path, trackingTitle,
+                            pageTransitions.effect.slide, pageTransitions.direction.left, 0, 0 );
+                    console.log( '[nav] app navigated to menu item: [' + (trackingTitle || path) + '].' );
                 };
 
                 /**
@@ -124,7 +158,6 @@
                                             contentUpdater.updateContentPackageByName($scope.contentPackageName,
                                                 function callback(error, pathToContent) {
                                                     if (error) {
-                                                        $scope.updating = false;
                                                         return navigator.notification.alert(error, null, 'Error');
                                                     }
                                                     // else
@@ -140,18 +173,16 @@
                                     'Content Update',       // title
                                     ['Update', 'Later'] // button labels
                                 );
-                            } else {
+                            }
+                            else {
                                 navigator.notification.alert('App is up to date.', null, 'Content Update', 'Done');
                             }
                         }
                     );
                 };
-
-                /*
-                 * Private helpers
-                 */
-                function navigateToPage( path, trackingTitle, transition, transitionDirection,
-                                         fixedHeaderHeight, fixedFooterHeight) {
+                
+                function navigateToPage( path, trackingTitle, transition, transitionDirection, 
+                        fixedHeaderHeight, fixedFooterHeight) {
 
                     if( $scope.wcmMode ) {
                         // WCMMode is enabled; head to the page itself
@@ -244,5 +275,6 @@
                     }
                 }
             }
-        ]);
+        ]
+    );
 })(angular, CQ.mobile.contentUpdate);

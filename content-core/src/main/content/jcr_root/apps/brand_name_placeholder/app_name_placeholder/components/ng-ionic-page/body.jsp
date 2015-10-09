@@ -11,29 +11,31 @@
 %>
 <body ng-controller="AppController">
     <div id="appWrap" ng-controller="AppNavigationController" ng-cloak>
-        <div snap-drawer>
-			<cq:include script="menu.jsp"/>
-        </div>
+        <ion-side-menus>
+            <ion-side-menu side="left">
+                <cq:include script="menu.jsp"/>
+            </ion-side-menu>
 
-		<div snap-content snap-options="{disable: 'right'}">
-            <c:choose>
-                <c:when test="${wcmMode}">
-                    <%-- Render the content in a way that does not break
-                        author mode --%>
-                    <div ng-controller="<c:out value="${controllerNameStripped}"/>">
-                        <cq:include script="template.jsp"/>
-                    </div>
-    
-                </c:when>
-                <c:otherwise>
-    
-                    <div ng-view class="view-animate" ng-class="transition"></div>
-    
-                    <script type="text/javascript" src="<%= xssAPI.getValidHref( relativePathToRoot ) %>cordova.js"></script>
-    
-                </c:otherwise>
-            </c:choose>
-        </div>
+            <ion-side-menu-content>
+                <c:choose>
+                    <c:when test="${wcmMode}">
+                        <%-- Render the content in a way that does not break
+                            author mode --%>
+                        <div ng-controller="<c:out value="${controllerNameStripped}"/>">
+                            <cq:include script="template.jsp"/>
+                        </div>
+        
+                    </c:when>
+                    <c:otherwise>
+        
+                        <div ng-view class="view-animate" ng-class="transition"></div>
+        
+                        <script type="text/javascript" src="<%= xssAPI.getValidHref( relativePathToRoot ) %>cordova.js"></script>
+        
+                    </c:otherwise>
+                </c:choose>
+            </ion-side-menu-content>
+        </ion-side-menus>
 
         <cq:include script="footer.jsp"/>
     </div>
