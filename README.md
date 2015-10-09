@@ -78,7 +78,7 @@ A few things to try:
 
 - Add a child page. It will become linked via the Ionic Menu List component already included on the home page of your app
 - Add an image or text component
-- Install the [aem-phonegap-kitchen-sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) project to experiment with a number of other components that deal with PhoneGap's device APIs
+- Check out the [aem-phonegap-kitchen-sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) project to experiment with a number of components that deal with PhoneGap's device APIs
 - Enter 'preview' mode, and drag the page to the right to reveal the left shelf menu
 
 

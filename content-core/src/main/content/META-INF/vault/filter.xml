@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/brand_name_placeholder/app_name_placeholder"/>
-    <filter root="/etc/clientlibs/brand_name_placeholder/ionic-1.0.0"/>
+    <filter root="/etc/clientlibs/brand_name_placeholder/ionic-1.1.0"/>
     <filter root="/etc/clientlibs/brand_name_placeholder/angular-snap"/>
     <filter root="/etc/clientlibs/brand_name_placeholder/phonegap-ready"/>
     <filter root="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"/>

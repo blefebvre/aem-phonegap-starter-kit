@@ -2,5 +2,5 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[apps.brand_name_placeholder.app_name_placeholder.all]"
-    dependencies="[brand_name_placeholder.ionic-1.0.0]"
+    dependencies="[brand_name_placeholder.ionic-1.1.0]"
     embed="[angular-snap,brand_name_placeholder.btford-angular-phonegap,apps.brand_name_placeholder.nav,apps.brand_name_placeholder.app_name_placeholder,cq.mobile.content-sync-2]"/>
