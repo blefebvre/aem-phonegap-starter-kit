@@ -1,4 +1,4 @@
-;(function (angular, contentUpdate, undefined) {
+;(function (angular, contentUpdate, contentPackageSwitcher, undefined) {
 
     'use strict';
 
@@ -180,6 +180,18 @@
                         }
                     );
                 };
+
+                /**
+                 * Switch to an alternate content package
+                 */
+                $scope.switchContentPackage = function(packageName) {
+                    var spec = {
+                        id: appName, 
+                        name: packageName
+                    };
+                    var switcher = contentPackageSwitcher(spec);
+                    switcher.usePackage();
+                };
                 
                 function navigateToPage( path, trackingTitle, transition, transitionDirection, 
                         fixedHeaderHeight, fixedFooterHeight) {
@@ -277,4 +289,4 @@
             }
         ]
     );
-})(angular, CQ.mobile.contentUpdate);
+})(angular, CQ.mobile.contentUpdate, starterKit.contentPackageSwitcher);
