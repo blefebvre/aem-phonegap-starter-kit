@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"
-        cq:lastModified="{Date}2014-11-12T23:37:52.822-05:00"
+        cq:lastModified="{Date}2015-11-02T20:16:54.793-05:00"
         cq:lastModifiedBy="admin"
         cq:template="/apps/brand_name_placeholder/app_name_placeholder/templates/ng-ionic-page"
         jcr:primaryType="cq:PageContent"
@@ -22,6 +22,17 @@
                 frameworkType="angular"
                 text="&lt;p>Subpage text&lt;/p>&#xa;"
                 textIsRich="true"/>
+            <modal_button
+                jcr:created="{Date}2015-11-01T21:40:22.569-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-02T20:16:54.791-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Modal Dialog"
+                sling:resourceType="brand_name_placeholder/app_name_placeholder/components/modal-button"
+                frameworkType="angular"
+                pagePath="/content/phonegap/app_name_placeholder/en/home/subpage/modal-subpage"/>
         </content-par>
     </jcr:content>
+    <modal-subpage/>
 </jcr:root>

@@ -11,7 +11,7 @@ video {
     max-width: 100%;
 }
 
-.ng-text p, 
+.ng-text p, .text p,
 .ionic-inappbrowser-button {
 	padding: 0.5em 1em 0 1em;
 	margin: 0;

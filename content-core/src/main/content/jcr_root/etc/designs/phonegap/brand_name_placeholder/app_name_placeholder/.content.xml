@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <clientlibsall/>
     <jcr:content
-        cq:lastModified="{Date}2014-03-26T10:01:29.277-06:00"
+        cq:lastModified="{Date}2015-11-02T20:35:52.419-05:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="app_name_placeholder App Design"
@@ -18,5 +18,15 @@
                 <section jcr:primaryType="nt:unstructured"/>
             </content-par>
         </ng-ionic-page>
+        <modal-page jcr:primaryType="nt:unstructured">
+            <content-par
+                jcr:lastModified="{Date}2015-11-02T20:35:52.417-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="/libs/foundation/components/text">
+                <section jcr:primaryType="nt:unstructured"/>
+            </content-par>
+        </modal-page>
     </jcr:content>
 </jcr:root>

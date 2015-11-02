@@ -13,7 +13,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Main"
-        jcr:uuid="9596ccbb-3b1c-4919-bbda-551113bb85c5"
+        jcr:uuid="20119f6e-26ed-4cd5-88e1-adcb6f5777e7"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"
         phonegap-contentPackageName="en"
         phonegap-contentSyncConfigPath="/content/phonegap/brand_name_placeholder/content/app_name_placeholder/contentsync">
