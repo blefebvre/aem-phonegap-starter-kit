@@ -16,5 +16,6 @@
 'ngSanitize',
 'cqAppControllers',
 'cqAppNavigation',
-'ionic'
+'ionic',
+'ngIOS9UIWebViewPatch'
 ]
