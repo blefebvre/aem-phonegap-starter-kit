@@ -109,7 +109,7 @@ Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci
 A very open Content-Security-Policy meta tag has been included in [two](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/ng-ionic-page/css_clientlibs.jsp) [places](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/splash-page/headlibs.jsp). You should review [the documentation](https://github.com/apache/cordova-plugin-whitelist#content-security-policy) on its usage and adjust this tag for your particular app's requirements.
 
 
-## A note on localhost
+### A note on localhost
 
 `localhost` takes on a different meaning when your app is running on Android, [unfortunately](http://developer.android.com/tools/devices/emulator.html#networkaddresses). As a workaround you can use either `http://10.0.2.2:4503/` as your app's "Update URL" (which will fail on iOS), or set it to the IP address of your machine.
 
