@@ -2,7 +2,7 @@
 <jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:file">
     <jcr:content
-        dam:folderThumbnailPaths="[/content/dam/brand_name_placeholder/app_name_placeholder/thumbnail.png,/content/dam/brand_name_placeholder/app_name_placeholder/icon.png]"
+        dam:folderThumbnailPaths="[/content/dam/brand_name_placeholder/app_name_placeholder/thumbnail.png,/content/dam/brand_name_placeholder/app_name_placeholder/icon.png,/content/dam/brand_name_placeholder/app_name_placeholder/mel_jumping.jpg]"
         jcr:primaryType="nt:unstructured"
         bgcolor="{Long}-1"
         height="{Long}140"
