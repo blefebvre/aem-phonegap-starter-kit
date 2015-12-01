@@ -7,7 +7,7 @@
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
         jcr:title="app_name_placeholder App"
-        sling:resourceType="mobileapps/components/phonegap/instance"
+        sling:resourceType="mobileapps/phonegap/components/instance"
         phonegap-build-exportTemplate="../../shell/jcr:content/pge-app/app_name_placeholder"
         phonegap-build-exportTemplate-dev="../../shell/jcr:content/pge-app/app_name_placeholder-dev"
         phonegap-exportTemplate="../jcr:content/pge-app/app-config">
