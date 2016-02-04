@@ -33,4 +33,5 @@
         </content-par>
     </jcr:content>
     <subpage/>
+    <no-header-page/>
 </jcr:root>
