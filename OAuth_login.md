@@ -43,4 +43,3 @@
     - This file should contain the values you generated above
 - Run the app targeting either iOS or Android
 - From the left flyout data, tap "Login"
--
