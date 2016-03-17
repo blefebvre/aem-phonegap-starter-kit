@@ -13,7 +13,10 @@
 - Find the config entry for "Adobe Granite OAuth Server Authentication Handler"
     - Use the edit button (pencil icon) to open it's config dialog
     - Tap "Save" to enable OAuth on your publish instance
-
+- Find the config entry for "Day CQ Login Selector Authentication Handler"
+    - Use the edit button (pencil icon) to open it's config dialog
+    - Configure the login page by adding a new value to `auth.loginselector.mappings` with value: `/libs/granite/core/content/login:/libs/granite/oauth/content`
+    - Tap "Save" to enable the Granite login page for OAuth requests
 
 #### Create a client for your app
 
