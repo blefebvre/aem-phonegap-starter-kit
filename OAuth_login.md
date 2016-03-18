@@ -2,7 +2,7 @@
 
 ## Setup
 
-#### Enable OAuth
+#### Enable Client Application Access
 
 - Log into your publish instance, via the [CRX/explorer](http://localhost:4503/crx/explorer/login.jsp)
 - Open the System Console [Configuration page](http://localhost:4503/system/console/configMgr)
@@ -10,6 +10,10 @@
     - Use the edit button (pencil icon) to open it's config dialog
     - Select the "Allow Empty" checkbox to enable requests from Cordova apps
     - Tap "Save" to continue
+
+#### Enable OAuth
+
+- Open the System Console [Configuration page](http://localhost:4503/system/console/configMgr)
 - Find the config entry for "Adobe Granite OAuth Server Authentication Handler"
     - Use the edit button (pencil icon) to open it's config dialog
     - Tap "Save" to enable OAuth on your publish instance
