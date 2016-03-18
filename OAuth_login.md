@@ -20,8 +20,8 @@
     - Alternatively, use the following cURL command to perform this action: 
 ```
 curl -u admin:admin --data "apply=true&action=ajaxConfigManager&%24location=launchpad%3Aresources%2Finstall.crx3%2F0%2Fcom.adobe.granite.oauth.server-1.0.8.jar&path=%2F&jaas.controlFlag=sufficient&jaas.realmName=jackrabbit.oak&jaas.ranking=1000&oauth.offline.validation=true&propertylist=path%2Cjaas.controlFlag%2Cjaas.realmName%2Cjaas.ranking%2Coauth.offline.validation" http://localhost:4503/system/console/configMgr/com.adobe.granite.oauth.server.auth.impl.OAuth2ServerAuthenticationHandler
-- Find the config entry for "Day CQ Login Selector Authentication Handler"
 ```
+- Find the config entry for "Day CQ Login Selector Authentication Handler"
     - Use the edit button (pencil icon) to open it's config dialog
     - Configure the login page by adding a new value to `auth.loginselector.mappings` with value: `/libs/granite/core/content/login:/libs/granite/oauth/content`
     - Tap "Save" to enable the Granite login page for OAuth requests
