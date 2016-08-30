@@ -3,7 +3,7 @@
     jcr:description="app_name_placeholder App Template"
     jcr:primaryType="cq:Template"
     jcr:title="app_name_placeholder App"
-    allowedPaths="[/content/phonegap(/.*)?,/content/mobileapps(/.*)?]"
+    allowedPaths="[/content/mobileapps(/.*)?,/content/mobileapps(/.*)?]"
     wizard="/libs/mobileapps/admin/content/createappsteps.html">
     <jcr:content
         cq:allowedTemplates="[/apps/brand_name_placeholder/app_name_placeholder/templates/.*]"

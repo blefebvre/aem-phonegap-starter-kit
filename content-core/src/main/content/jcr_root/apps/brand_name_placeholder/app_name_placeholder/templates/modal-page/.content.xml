@@ -4,7 +4,7 @@
     jcr:primaryType="cq:Template"
     jcr:title="Ionic Modal Dialog page"
     allowedParents="[/apps/brand_name_placeholder/app_name_placeholder/templates/ng-ionic-page]"
-    allowedPaths="[/content/phonegap(/.*)?,/content/mobileapps(/.*)?]"
+    allowedPaths="[/content/mobileapps(/.*)?,/content/mobileapps(/.*)?]"
     ranking="{Long}-2">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"

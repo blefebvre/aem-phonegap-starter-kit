@@ -40,7 +40,7 @@ curl -u admin:admin --data "apply=true&action=ajaxConfigManager&%24location=laun
 #### Link the app to your client
 
 - Log into your [author instance](http://localhost:4502/aem/apps.html/content/mobileapps)
-- From your app's "Manage App" tile, use the ellipsis to open the [details page](http://localhost:4502/libs/mobileapps/admin/content/dashboard/appdetails.html/content/phonegap/geometrixx-outdoors/shell)
+- From your app's "Manage App" tile, use the ellipsis to open the [details page](http://localhost:4502/libs/mobileapps/admin/content/dashboard/appdetails.html/content/mobileapps/geometrixx-outdoors/shell)
 - Select the "Authentication" tab
 - Enter the "Client ID", "Client Secret", and "Redirect URI" as generated on your publish instance [OAuth Clients console](http://localhost:4503/libs/granite/oauth/content/clients.html)
 - Tap "Save" to persist your changes and continue

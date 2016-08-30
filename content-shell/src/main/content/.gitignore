@@ -1,10 +1,6 @@
 .vlt
 
 jcr_root/.content.xml
-jcr_root/apps/.content.xml
-jcr_root/etc/.content.xml
-jcr_root/etc/clientlibs/.content.xml
-jcr_root/etc/designs/.content.xml
 jcr_root/content/.content.xml
 jcr_root/content/mobileapps/.content.xml
 jcr_root/content/projects/.content.xml

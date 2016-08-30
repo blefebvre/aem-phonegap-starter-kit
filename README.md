@@ -1,24 +1,22 @@
 AEM Apps Starter Kit
 ====================
 
-:new: Note that the requirements have changed as of September 2015. If you do not have AEM 6.1 + FeaturePack 2, please use the `release/6.1` branch.
+:new: Note that the requirements have changed as of September 2016. If you do not have AEM 6.2, please use the `release/6.1-FP2` branch.
 
 
 ### Goal 
 
-To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.1 instance and committed to a version control system.
+To provide you - the developer - with an AEM Apps project on your filesystem, ready to be built and installed to a running AEM 6.2 instance and committed to a version control system.
 
 
 ### Requirements
 
-- AEM 6.1
-	- [Apps FeaturePack 2.0.12](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack)
-	- [Apps Samples 2.0.8](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq610/featurepack2/cq-6.1.0-apps-featurepack-samples) (optional; updates Geo samples)
-- [Apache Maven](https://maven.apache.org/) version `>=3.1.1`
-- [node.js](http://nodejs.org/) version `>=0.12.x`
-- [Cordova CLI](https://github.com/apache/cordova-cli/) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
-- (iOS only) Xcode version `>=6.3.1`
-- (iOS only) [ios-sim](https://github.com/phonegap/ios-sim#installation) 
+- AEM 6.2
+- [Apache Maven](https://maven.apache.org/) version `>=3.2.5`
+- [node.js](http://nodejs.org/) version `>=4.3.0`
+- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
+- (iOS only) Xcode version `>=7.3.1`
+- (iOS only) [ios-deploy](https://github.com/phonegap/ios-deploy) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
 
 
@@ -59,7 +57,7 @@ From the project root, run:
 
     mvn -PautoInstallTemplate clean install 
 
-- Navigate to the [AEM Apps console](http://localhost:4502/aem/apps.html/content/phonegap)
+- Navigate to the [AEM Apps console](http://localhost:4502/aem/apps.html/content/mobileapps)
 - Select *Create* menu option
 - Select *Create App*
 - Choose the *Starter Kit* template
@@ -68,11 +66,11 @@ From the project root, run:
 
 ### Edit in AEM
 
-Once built and installed via maven, your new app should be editable in AEM. Take a look at the new [Apps admin console](http://localhost:4502/aem/apps.html/content/phonegap) to view the available apps on your instance.
+Once built and installed via maven, your new app should be editable in AEM. Take a look at the new [Apps admin console](http://localhost:4502/aem/apps.html/content/mobileapps) to view the available apps on your instance.
 
 A new app folder with the brand name you specified above ('Geometrixx' in my case) should be listed. Tap it to view the app you created, which will be listed with the Cordova logo as it's thumbnail. If you followed the instructions exactly and have your author instance running locally on :4502, you should be able to author your new app via the following link:
 
-[http://localhost:4502/editor.html/content/phonegap/Geometrixx/ShapesCon/en/home.html](http://localhost:4502/editor.html/content/phonegap/Geometrixx/ShapesCon/en/home.html)
+[http://localhost:4502/editor.html/content/mobileapps/Geometrixx/ShapesCon/en/home.html](http://localhost:4502/editor.html/content/mobileapps/Geometrixx/ShapesCon/en/home.html)
 
 A few things to try:
 
@@ -84,7 +82,7 @@ A few things to try:
 
 ### Run on the iOS Simulator
 
-From the [Apps console](http://localhost:4502/aem/apps.html/content/phonegap), navigate to your app's [Command Center](http://localhost:4502/libs/mobileapps/admin/content/dashboard.html/content/phonegap/Geometrixx/ShapesCon/shell) (your URI will differ based on the values you provided to `customize-app.sh`).
+From the [Apps console](http://localhost:4502/aem/apps.html/content/mobileapps), navigate to your app's [Command Center](http://localhost:4502/libs/mobileapps/admin/content/dashboard.html/content/mobileapps/Geometrixx/ShapesCon/shell) (your URI will differ based on the values you provided to `customize-app.sh`).
 
 Locate the 'PhoneGap Build' tile, and the down arrow to the top right of the pane. Tap this arrow, then tap the 'Download CLI' item to initiate a download of your app's content. A .zip payload will be downloaded locally. Using your command line of choice, navigate to the directory created by extracting the payload. Using OS X? this handy [Finder toolbar app](https://github.com/jbtule/cdto) makes it easy.
 
@@ -106,7 +104,7 @@ Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci
 
 ### On 'Content Security Policy'
 
-A very open Content-Security-Policy meta tag has been included in [two](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/ng-ionic-page/css_clientlibs.jsp) [places](content-dev/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/splash-page/headlibs.jsp). You should review [the documentation](https://github.com/apache/cordova-plugin-whitelist#content-security-policy) on its usage and adjust this tag for your particular app's requirements.
+A very open Content-Security-Policy meta tag has been included in [two](content-shell/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/ng-ionic-page/css_clientlibs.jsp) [places](content-shell/src/main/content/jcr_root/apps/brand_name_placeholder/app_name_placeholder/components/splash-page/headlibs.jsp). You should review [the documentation](https://github.com/apache/cordova-plugin-whitelist#content-security-policy) on its usage and adjust this tag for your particular app's requirements.
 
 
 ### A note on localhost
