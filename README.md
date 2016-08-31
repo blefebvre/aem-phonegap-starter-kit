@@ -14,7 +14,7 @@ To provide you - the developer - with an AEM Apps project on your filesystem, re
 - AEM 6.2
 - [Apache Maven](https://maven.apache.org/) version `>=3.2.5`
 - [node.js](http://nodejs.org/) version `>=4.3.0`
-- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `==5.3.1` (install exact version with `npm install -g cordova@5.3.1`)
+- [PhoneGap CLI](https://github.com/phonegap/phonegap-cli) version `>=6.3.0` (install exact version with `npm install -g phonegap@6.3.0`)
 - (iOS only) Xcode version `>=7.3.1`
 - (iOS only) [ios-deploy](https://github.com/phonegap/ios-deploy) 
 - (Android only) [Android SDK](https://developer.android.com/sdk/index.html)
