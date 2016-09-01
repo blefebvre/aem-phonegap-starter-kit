@@ -68,7 +68,7 @@ From the project root, run:
 
 Once built and installed via maven, your new app should be editable in AEM. Take a look at the new [Apps admin console](http://localhost:4502/aem/apps.html/content/mobileapps) to view the available apps on your instance.
 
-A new app folder with the brand name you specified above ('Geometrixx' in my case) should be listed. Tap it to view the app you created, which will be listed with the Cordova logo as it's thumbnail. If you followed the instructions exactly and have your author instance running locally on :4502, you should be able to author your new app via the following link:
+A new app folder with the brand name you specified above ('Geometrixx' in my case) should be listed. Tap it to view the app you created, which will be listed with the PhoneGap logo as it's thumbnail. If you followed the instructions exactly and have your author instance running locally on :4502, you should be able to author your new app via the following link:
 
 [http://localhost:4502/editor.html/content/mobileapps/Geometrixx/ShapesCon/en/home.html](http://localhost:4502/editor.html/content/mobileapps/Geometrixx/ShapesCon/en/home.html)
 
@@ -86,9 +86,9 @@ From the [Apps console](http://localhost:4502/aem/apps.html/content/mobileapps),
 
 Locate the 'PhoneGap Build' tile, and the down arrow to the top right of the pane. Tap this arrow, then tap the 'Download CLI' item to initiate a download of your app's content. A .zip payload will be downloaded locally. Using your command line of choice, navigate to the directory created by extracting the payload. Using OS X? this handy [Finder toolbar app](https://github.com/jbtule/cdto) makes it easy.
 
-Using the [Cordova CLI](https://github.com/apache/cordova-cli/), build and deploy your application to the iOS Simulator with the following command:
+Using the [PhoneGap CLI](https://github.com/phonegap/phonegap-cli), build and deploy your application to the iOS Simulator with the following command:
 
-    cordova platform add ios && cordova run ios --emulator
+    phonegap emulate ios
 
 Note: at the time of writing there is an open issue with Apple's ATS and Cordova-ios. See the following [note in our docs](http://docs.adobe.com/docs/en/aem/6-1/develop/mobile-apps/apps.html#Developing%20for%20IOS%209%20and%20HTTP%20hosts) for a workaround.
 
