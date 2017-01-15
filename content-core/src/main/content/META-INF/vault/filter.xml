@@ -4,6 +4,7 @@
     <filter root="/etc/clientlibs/brand_name_placeholder/ionic-1.1.0"/>
     <filter root="/etc/clientlibs/brand_name_placeholder/phonegap-ready"/>
     <filter root="/etc/clientlibs/brand_name_placeholder/utility"/>
+    <filter root="/etc/clientlibs/brand_name_placeholder/auth"/>
     <filter root="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"/>
     <filter root="/content/dam/brand_name_placeholder/app_name_placeholder"/>
 </workspaceFilter>

@@ -17,5 +17,6 @@
 'cqAppControllers',
 'cqAppNavigation',
 'ionic',
-'ngIOS9UIWebViewPatch'
+'ngIOS9UIWebViewPatch',
+'cqMobileApps'
 ]

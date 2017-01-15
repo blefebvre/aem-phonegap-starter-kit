@@ -7,8 +7,8 @@
      */
     angular.module( 'cqAppNavigation', ['ionic', 'btford.phonegap.ready'] )
 
-        .controller( 'AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady', '$rootElement', '$ionicSideMenuDelegate', '$ionicTabsDelegate',
-            function( $scope, $window, $location, $timeout, phonegapReady, $rootElement, $ionicSideMenuDelegate, $ionicTabsDelegate) {
+        .controller( 'AppNavigationController', ['$scope', '$window', '$location', '$timeout', 'phonegapReady', '$rootElement', '$ionicSideMenuDelegate', '$ionicTabsDelegate', '$ionicLoading', 'AuthService', 'ProfileService',
+            function( $scope, $window, $location, $timeout, phonegapReady, $rootElement, $ionicSideMenuDelegate, $ionicTabsDelegate, $ionicLoading, AuthService, ProfileService) {
 
                 $scope.updating = false;
 
@@ -194,8 +194,40 @@
                 };
 
                 $scope.oauthLogin = function() {
-					alert("login!");
+                    // only perform logins while on the device running within cordova
+                    if (window.cordova) {
+                        $ionicLoading.show();
+
+                        AuthService.login()
+                            .then(function() {
+                                $scope.isLoggedIn = true;
+                                ProfileService.loadProfile().then(
+                                    function(profileData){
+                                        processProfile(profileData);
+                                        // TODO: pass profile data to Target
+                                    },
+                                    function() {
+                                        console.error("Unable to load user profile information");
+                                    }
+                                );
+                            }, function(error) {
+                                $scope.isLoggedIn = false;
+
+                                // need to hide if there is a config error
+                                $ionicLoading.hide();
+
+                                navigator.notification.alert(error);
+                            }, function() {
+
+                                // we can hide when we've been notified
+                                $ionicLoading.hide();
+                            });
+                    }
                 };
+
+                function processProfile(profile) {
+                    $scope.loggedInUserProfile = profile;
+                }
 
                 function navigateToPage( path, trackingTitle, transition, transitionDirection, 
                         fixedHeaderHeight, fixedFooterHeight) {

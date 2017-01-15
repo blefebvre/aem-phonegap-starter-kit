@@ -53,6 +53,7 @@
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
     <plugin name="adobe-mobile-services" spec="^4.7.0" />
     <plugin name="cordova-plugin-transport-security" spec="^0.1.2" />
+    <plugin name="cordova-plugin-ibeacon" spec="3.4.0" />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />

@@ -3,4 +3,4 @@
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[apps.brand_name_placeholder.app_name_placeholder.all]"
     dependencies="[brand_name_placeholder.ionic-1.1.0]"
-    embed="[brand_name_placeholder.btford-angular-phonegap,apps.brand_name_placeholder.nav,apps.brand_name_placeholder.app_name_placeholder,brand_name_placeholder.utility,cq.mobile.content-sync-2]"/>
+    embed="[cq.mobileapps,brand_name_placeholder.btford-angular-phonegap,apps.brand_name_placeholder.nav,apps.brand_name_placeholder.app_name_placeholder,brand_name_placeholder.utility,brand_name_placeholder.auth,cq.mobile.content-sync-2]"/>

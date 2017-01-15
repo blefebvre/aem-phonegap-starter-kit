@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:designPath="/etc/designs/phonegap/brand_name_placeholder/app_name_placeholder"
-        cq:lastModified="{Date}2014-03-03T20:11:37.186-08:00"
+        cq:lastModified="{Date}2017-01-15T14:04:01.210+08:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2014-02-28T01:29:47.720-05:00"
         cq:lastReplicatedBy="admin"
@@ -13,7 +13,7 @@
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="app_name_placeholder"
-        jcr:uuid="2d2c2b38-1293-4813-ad07-b1979238d866"
+        jcr:uuid="745106be-18a9-49cf-916f-2df560ad153c"
         sling:resourceType="brand_name_placeholder/app_name_placeholder/components/ng-ionic-page"
         phonegap-contentPackageName="en"
         phonegap-contentSyncConfigPath="/content/mobileapps/brand_name_placeholder/content/app_name_placeholder/contentsync">
@@ -30,6 +30,13 @@
                 listFrom="children"
                 playSpeed="6000"
                 transTime="1000"/>
+            <oauth_login
+                jcr:created="{Date}2017-01-15T14:03:52.258+08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2017-01-15T14:03:52.258+08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="brand_name_placeholder/app_name_placeholder/components/oauth-login"/>
         </content-par>
     </jcr:content>
     <subpage/>
