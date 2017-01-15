@@ -192,7 +192,11 @@
                     var switcher = contentPackageSwitcher(spec);
                     switcher.usePackage();
                 };
-                
+
+                $scope.oauthLogin = function() {
+					alert("login!");
+                };
+
                 function navigateToPage( path, trackingTitle, transition, transitionDirection, 
                         fixedHeaderHeight, fixedFooterHeight) {
 
