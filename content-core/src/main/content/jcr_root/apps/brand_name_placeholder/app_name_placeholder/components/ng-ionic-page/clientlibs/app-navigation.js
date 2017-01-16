@@ -198,6 +198,11 @@
                     if (window.cordova) {
                         $ionicLoading.show();
 
+                        // workaround to remove the spinner if the InAppBrowser window is closed
+                        window.setTimeout(function() {
+                            $ionicLoading.hide();
+                        }, 1000);
+
                         AuthService.login()
                             .then(function() {
                                 $scope.isLoggedIn = true;
