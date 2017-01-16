@@ -229,6 +229,41 @@
                     $scope.loggedInUserProfile = profile;
                 }
 
+                var successHandler = function() {
+                    AuthService.getAuth().getToken(function(error, token) {
+                        console.log('[nav] getToken call was successful. token value: [' + token + '].');
+                        $scope.isLoggedIn = (token) ? true : false;
+                        if ($scope.isLoggedIn) {
+                            console.log('[nav] user is logged in.');
+                            ProfileService.loadProfile().then(function(profile) {
+                                console.log('[nav] profile data is available. profile: ' + JSON.stringify(profile) + '.');
+                                processProfile(profile);
+                            }, function() {
+                                // no-op
+                            });
+                        }
+                    }, function() {
+                        console.log('[nav] login(true) call was successful, but getToken call failed.');
+                        $scope.isLoggedIn = false;
+                    });
+                };
+
+                var failureHandler = function() {
+                    // Failed to login with existing profile
+                    console.log('[nav] attempted to login with existing token, but failed.');
+                    $scope.isLoggedIn = false;
+                };
+
+                // Attempt to login with existing token, if available
+                // using login(true) allows us to see if we're logged in
+                AuthService.login(true).then(successHandler, failureHandler);
+
+                $scope.oauthLogout = function() {
+                    AuthService.getAuth().logout();
+                    $scope.isLoggedIn = false;
+                    console.log('[nav] user has logged out.');
+                };
+
                 function navigateToPage( path, trackingTitle, transition, transitionDirection, 
                         fixedHeaderHeight, fixedFooterHeight) {
 

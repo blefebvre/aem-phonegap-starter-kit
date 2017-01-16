@@ -1,3 +1,14 @@
-<button ng-click="oauthLogin()">
-    ${properties.jcr:title || "OAuth Login"}
-</button>
+<div ng-show="!isLoggedIn">
+    <button ng-click="oauthLogin()">
+        ${properties.loginButtonText || "OAuth Login"}
+    </button>
+</div>
+
+<div class="login ng-hide" ng-show="isLoggedIn">
+    <div>
+        Logged in as: {{loggedInUserProfile.givenName}} {{loggedInUserProfile.familyName}}
+    </div>
+    <button ng-click="oauthLogout()">
+        ${properties.logoutButtonText || "Logout"}
+    </button>
+</div>
