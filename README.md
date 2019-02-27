@@ -1,7 +1,11 @@
-AEM Apps Starter Kit
+DEPRECATED: AEM Apps Starter Kit
 ====================
 
-:new: Note that the requirements have changed as of September 2016. If you do not have AEM 6.2, please use the `release/6.1-FP2` branch.
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+⛔️This project is no longer maintained or supported.
+
+Note that the requirements have changed as of September 2016. If you do not have AEM 6.2, please use the `release/6.1-FP2` branch.
 
 
 ### Goal 
